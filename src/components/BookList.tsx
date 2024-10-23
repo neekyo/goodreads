@@ -1,11 +1,14 @@
-// import { Book } from '../types';
+import BookCard from './BookCard';
+import mockBooks from '../data/mockBooks';
 
-// interface BookListProps {
-//   book: Book;
-// }
+const BookList = () => {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {mockBooks.map((book) => (
+        <BookCard key={book.id} book={book} />
+      ))}
+    </div>
+  );
+};
 
-// const BookList = ({ book }: BookListProps) => {
-//   return <div>BookList</div>
-// }
-
-// export default BookList;
+export default BookList;

@@ -1,10 +1,12 @@
 export interface Book {
   id: string;
   title: string;
-  author: string;
-  rating?: number;
-  description?: string;
+  author: string[];
+  description: string;
   coverImage?: string;
+  rating?: number;
+  publishedDate?: string;
+  imageLinks?: { thumbnail?: string };
 }
 
 export interface User {
